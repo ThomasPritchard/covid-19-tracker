@@ -5,7 +5,7 @@ class Header extends Component {
     super(props);
     this.state = {
       countryNames: this.props.countries,
-      countryValue: "",
+      countryValue: "United Kingdom",
     };
   }
 

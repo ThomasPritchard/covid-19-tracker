@@ -44,6 +44,7 @@ class CovidPieChart extends Component {
       this.setState({
         totalConfirmed: this.props.totalConfirmed,
         totalDeaths: this.props.totalDeaths,
+        date: this.props.date,
       });
     }
   }

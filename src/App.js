@@ -10,6 +10,7 @@ class App extends Component {
     this.state = {
       apiData: {},
       loading: true,
+      countryValue: "",
     };
     this.handleChange = this.handleChange.bind(this);
   }
@@ -23,7 +24,7 @@ class App extends Component {
           return {
             apiData: returnData,
             loading: false,
-            countryValue: "",
+            countryValue: "United Kingdom",
           };
         });
       });
@@ -50,12 +51,7 @@ class App extends Component {
       const mappedArray = this.state.apiData.Countries.map(
         (item) => item.Country
       );
-      let index;
-      if (this.state.countryValue !== "") {
-        index = mappedArray.indexOf(this.state.countryValue);
-      } else {
-        index = mappedArray.indexOf("United Kingdom");
-      }
+      const index = mappedArray.indexOf(this.state.countryValue);
       return (
         <div>
           <Header countries={mappedArray} submitChange={this.handleChange} />
