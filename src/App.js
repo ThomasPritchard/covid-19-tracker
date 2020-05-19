@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Header from "./components/Header";
 import CovidStats from "./components/CovidStats";
-import CovidChart from "./components/CovidChart";
+import CovidPieChart from "./components/CovidPieChart";
 import "./styles.css";
 
 class App extends Component {
@@ -60,7 +60,7 @@ class App extends Component {
         <div>
           <Header countries={mappedArray} submitChange={this.handleChange} />
           <CovidStats country={this.state.apiData.Countries[index]} />
-          <CovidChart
+          <CovidPieChart
             totalConfirmed={this.state.apiData.Countries[index].TotalConfirmed}
             totalDeaths={this.state.apiData.Countries[index].TotalDeaths}
             date={this.state.apiData.Countries[index].Date}

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Pie } from "react-chartjs-2";
 
-class CovidChart extends Component {
+class CovidPieChart extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -64,4 +64,4 @@ class CovidChart extends Component {
     );
   }
 }
-export default CovidChart;
+export default CovidPieChart;
