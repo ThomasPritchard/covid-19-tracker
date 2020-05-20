@@ -14,9 +14,9 @@ class CovidPieChart extends Component {
       datasets: [
         {
           label: "United Kingdom",
-          backgroundColor: ["#ffeb3b", "#005eb8"],
+          backgroundColor: ["#005eb8", "#ff197d"],
           borderColor: "#005eb8",
-          borderWidth: 1,
+          borderWidth: 0.5,
           data: [this.state.totalConfirmed, this.state.totalDeaths],
         },
       ],
@@ -34,9 +34,9 @@ class CovidPieChart extends Component {
         datasets: [
           {
             label: "United Kingdom",
-            backgroundColor: ["#ffeb3b", "#005eb8"],
+            backgroundColor: ["#005eb8", "#ff197d"],
             borderColor: "#005eb8",
-            borderWidth: 1,
+            borderWidth: 0.5,
             data: [this.props.totalConfirmed, this.props.totalDeaths],
           },
         ],
@@ -57,7 +57,7 @@ class CovidPieChart extends Component {
       <div className="outer-chart-container">
         <div className="inner-chart-container">
           <h2>
-            Today's Graph (Updated: {formattedDate} at {formattedTime})
+            Visualised Chart (Updated: {formattedDate} at {formattedTime})
           </h2>
           <Pie data={this.data} />
         </div>

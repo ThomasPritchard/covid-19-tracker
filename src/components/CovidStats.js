@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Cards from "./Cards";
 
 class CovidStats extends Component {
   constructor(props) {
@@ -19,13 +20,15 @@ class CovidStats extends Component {
   render() {
     return (
       <div className="container">
-        <h2>Covid-19 Statistics for {this.state.country.Country}</h2>
-        <ul>
-          <li>New Confirmed Cases: {this.state.country.NewConfirmed}</li>
-          <li>Total Confirmed Cases: {this.state.country.TotalConfirmed}</li>
-          <li>New Deaths: {this.state.country.NewDeaths}</li>
-          <li>Total Deaths: {this.state.country.TotalDeaths}</li>
-        </ul>
+        <h2>
+          Covid-19 Statistics for {this.state.country.Country} (Last 24-hours)
+        </h2>
+        <Cards
+          newConfirmed={this.state.country.NewConfirmed}
+          totalConfirmed={this.state.country.TotalConfirmed}
+          newDeaths={this.state.country.NewDeaths}
+          totalDeaths={this.state.country.TotalDeaths}
+        />
       </div>
     );
   }
