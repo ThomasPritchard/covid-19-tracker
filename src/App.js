@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import CovidStats from "./components/CovidStats";
 import CovidPieChart from "./components/CovidPieChart";
 import "./styles.css";
+import CovidLineGraph from "./components/CovidLineGraph";
 
 class App extends Component {
   constructor() {
@@ -56,6 +57,7 @@ class App extends Component {
         <div>
           <Header countries={mappedArray} submitChange={this.handleChange} />
           <CovidStats country={this.state.apiData.Countries[index]} />
+          <CovidLineGraph countryValue={this.state.countryValue} />
           <CovidPieChart
             totalConfirmed={this.state.apiData.Countries[index].TotalConfirmed}
             totalDeaths={this.state.apiData.Countries[index].TotalDeaths}

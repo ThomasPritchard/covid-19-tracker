@@ -28,7 +28,6 @@ class CovidPieChart extends Component {
       prevProps.totalConfirmed !== this.props.totalConfirmed &&
       prevProps.totalDeaths !== this.props.totalDeaths
     ) {
-      console.log("Update");
       this.data = {
         labels: ["Total Confirmed", "Total Deaths"],
         datasets: [
